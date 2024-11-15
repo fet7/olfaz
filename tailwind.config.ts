@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
 
+
 export default {
     darkMode: ["class"],
     content: [
@@ -10,6 +11,10 @@ export default {
   ],
   theme: {
   	extend: {
+        backgroundImage: {
+            'gradient-instagram':
+                'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
+        },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -77,5 +82,7 @@ export default {
         padding: '1rem',
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    tailwindcssAnimate
+  ],
 } satisfies Config;
